@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="empbean" class="business.Employee">
+		<property name="eid" value="100"></property>
+		<property name="ename" value="Allen"></property>
+		
+		<property name="email" value="allen@gmail.com"></property>
+		<property name="acc">
+				<ref bean="account1"/>
+		</property>
+		<property name="address">
+				<ref bean="address"/>
+		</property>
+		
+	</bean>
+	
+	
+	
+	
+	<bean id="account1" class="business.Account">
+		<property name="accnum" value="787"></property>
+		<property name="acctype" value="saving"></property>
+		<property name="accbranchname" value="INDIA"></property>
+	
+		
+	</bean>
+	
+	<bean id="address" class="business.Address">
+		<property name="id" value="787"></property>
+		<property name="city" value="Solan"></property>
+		<property name="state" value="H.P"></property>
+		<property name="country" value="INDIA"></property>
+		<property name="street" value="Mall road"></property>
+		
+	
+	</bean>
+	
+	
+	
+	
+	
+	
+</beans>
